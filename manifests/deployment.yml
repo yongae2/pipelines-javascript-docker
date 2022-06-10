@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yongaepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yongaepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yongaepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yongaepipelinesjavascriptdocker 
+          image: user37acr.azurecr.io/yongaepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
